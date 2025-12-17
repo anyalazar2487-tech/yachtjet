@@ -31,21 +31,24 @@ img {
 
 .container {
   max-width: 375px;
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
 .container {
     max-width: 768px;
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
     .container {
     max-width: 1440px;
-    padding: 0 100px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
@@ -139,7 +142,21 @@ img {
 /*hero*/
 
 .hero {
-  padding: 60px 0 80px;
+  padding: 198px 0 243px;
+  background-image: url('../images/fome-mobile1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: url("../images/fone-mobile2x.jpg");
+    }
 }
 
 .wrapper-all {
@@ -147,43 +164,92 @@ img {
 }
 
 .hero-text {
+  font-weight: 500;
   font-size: 32px;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fbfbfb;
+  margin-bottom: 24px;
 }
 
 .hero-description {
-  font-size: 14px;
-  line-height: 1.4;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.17;
+  text-align: center;
   color: rgba(251, 251, 251, 0.7);
-  margin-bottom: 30px;
+  margin-bottom: 38px;
 }
 
 .hero-link {
   display: inline-block;
-  padding: 14px 28px;
-  background-color: #1b414b;
   border-radius: 15px;
+  padding: 14px 32px;
+  width: 141px;
+  height: 46px;
+  background-color: #1b414b;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
 }
 
 @media screen and (min-width: 768px) {
+   .hero {
+    background-image: url('../images/fone-tablet1x.jpg');
+    padding: 200px 0 215px;
+   }
+
    .wrapper-all {
-    max-width: 640px;
+    max-width: 704px;
   }
 
   .hero-text {
-    font-size: 48px;
+    font-size: 70px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 48px;
+  }
+
+  .hero-link {
+    padding: 16px 40px;
+    width: 179px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero {
+    background-image: url('../images/fone-tablet2x.jpg');
   }
 }
 
 @media screen and (min-width: 1440px) {
    .hero {
-    padding-top: 120px;
+    padding: 155px 0 180px;
+    background-image: url('../images/fone-desk1x.jpg');
+  }
+
+   .wrapper-all {
+    max-width: 1001px;
   }
 
   .hero-text {
-    font-size: 56px;
-    max-width: 900px;
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+.hero {
+    background-image: url('../images/fone-desk2x.jpg');
   }
 }
 
@@ -191,42 +257,131 @@ img {
 
 .second-section {
   padding-bottom: 80px;
+  text-align: start;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .all {
-  margin-bottom: 40px;
+  border-radius: 24px;
+  max-width: 335px;
+  height: 675px;
+  background-color: #fbfbfb;
+}
+
+.all-text {
+  padding: 40px 20px 0;
 }
 
 .second-section-big-text {
+  font-weight: 500;
   font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #1b414b;
+  margin-bottom: 40px;
+}
+
+.second-section-one-desk{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #1b414b;
   margin-bottom: 20px;
-}
 
-.second-section-richt-desk {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
-
-.second-section-one-desk,
 .second-section-two-desk {
-  font-size: 14px;
-  line-height: 1.4;
-  color: rgba(251, 251, 251, 0.7);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #040306;
+  opacity: 0.4;
+  margin-bottom: 40px;
+}
+
+.second-img {
+  border-radius: 0 24px 0 0;
+  width: 335px;
+  height: 395px;
 }
 
 @media screen and (min-width: 768px) {
-   .second-section .container {
-    display: flex;
-    gap: 32px;
-    align-items: center;
+   .second-section {
+   padding-bottom: 150px;
   }
 
   .all {
-    flex: 1;
-    margin-bottom: 0;
+   max-width: 704px;
+   height: 675px;
+  }
+
+  .all-text {
+    padding-top: 50px;
+    padding-left: 32px;
+    padding-right: 136px;
+    padding-bottom: 0;
+  }
+
+  .second-section-big-text {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .second-section-one-desk {
+    font-size: 23px;
+  }
+
+  .second-section-two-desk {
+    font-size: 13px;
+    line-height: 1.15;
+    margin-bottom: 50px;
+  }
+
+  .second-img {
+    border-radius: 0 24px 0 0;
+    width: 704px;
+    height: 470px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+
+  .all {
+   max-width: 1340px;
+  }
+
+  .all-text {
+    text-align: left;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 0;
+    gap: 189px;
+  }
+
+  .second-section-richt-desk {
+    display: block;
+    text-align: right;
+    gap: 20px;
+    max-width: 354px;
+    height: 210px;
+    margin-bottom: 100px;
+  }
+
+  .second-section-big-text {
+    margin-bottom: 166px;
+    width: 537px;
+  }
+
+ .second-img {
+  width: 1340px;
+  height: 470px;
+ }
+}
+  
 
 /*choose*/
 
