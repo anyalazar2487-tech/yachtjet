@@ -1,216 +1,495 @@
-h1,h2,h3,p,ul {
-    margin: 0;
-    padding: 0;
-}
-ul, ol{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+/* ===== RESET / BASE ===== */
 
 body {
   font-family: "Inter", sans-serif;
-  color: #FBFBFB;
-  background-color: #0E1823;
+  background-color: #0e1823;
+  color: #fbfbfb;
 }
 
-.button {
-    cursor: pointer;
+h1, h2, h3, p {
+  margin: 0;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== CONTAINER ===== */
 
 .container {
   max-width: 375px;
+  padding: 0 20px;
   margin: 0 auto;
-  padding: 20px 20px;  
 }
 
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px; 
-    padding: 32px 32px;  
+@media screen and (min-width: 768px) {
+.container {
+    max-width: 768px;
+    padding: 0 32px;
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px; 
-    padding: 32px 100px;   
+@media screen and (min-width: 1440px) {
+    .container {
+    max-width: 1440px;
+    padding: 0 100px;
   }
 }
 
 /*header*/
 
 .header {
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.header-nav-list,
+.header-social-list {
+  display: none;
+}
+
+.burger-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .header-nav-list,
+  .header-social-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .burger-btn {
     display: none;
+  }
+}
+
+/*mobile menu*/
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: #0e1823;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.mobile-menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.mobile-menu-close {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+}
+
+.nav-list-mobile-menu {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: center;
+}
+
+.navi-link-mobile-menu {
+  font-size: 24px;
+}
+
+.social-list-mobile-menu {
+  margin-top: auto;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
 }
 
 
-
-
-/*section hero*/
+/*hero*/
 
 .hero {
-   background-image: url('../images/fome-mobile1x.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-}
-
-@media (min-resolution: 192dpi) {
-    .hero {
-        background-image: url('../images/fone-mobile2x.jpg')
-    }
+  padding: 60px 0 80px;
 }
 
 .wrapper-all {
-   max-width: 335px;
-   height: 250px;
+  max-width: 335px;
 }
 
 .hero-text {
-   font-weight: 500;
-   font-size: 32px;
-   line-height: 1;
-   letter-spacing: -0.02em;
-   text-align: center;
-   color: #fbfbfb;
-   padding-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 .hero-description {
-   font-weight: 300;
-   font-size: 12px;
-   line-height: 1.17;
-   text-align: center;
-   color: rgba(251, 251, 251, 0.7);
-   padding-bottom: 38px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(251, 251, 251, 0.7);
+  margin-bottom: 30px;
 }
 
 .hero-link {
-    border-radius: 15px;
-    padding: 14px 32px;
-    width: 141px;
-    height: 46px;
-    background-color: #1b414b;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: -0.02em;
-    color: #fbfbfb;  
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #1b414b;
+  border-radius: 15px;
 }
-
 
 @media screen and (min-width: 768px) {
-.hero {
-   background-image: url('../images/fone-tablet1x.jpg');
-}
+   .wrapper-all {
+    max-width: 640px;
+  }
 
-
-@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
-.hero {
-    background-image: url('../images/fone-tablet2x.jpg');
+  .hero-text {
+    font-size: 48px;
   }
 }
 
-.wrapper-all {
-   max-width: 704px;
-   height: 400px;
-}
-
-.hero-text {
-   font-size: 70px;
-}
-
-.hero-description {
-   font-size: 16px;
-   line-height: 1.4;
-   padding-bottom: 48px;
-}
-
-.hero-link {
-    padding: 16px 40px;
-    width: 179px;
-    height: 52px;
-    font-size: 18px;
-    line-height: 1.1; 
-}
-}
-
-
-@media screen and (min-width: 1158px) {
-.hero {
-   background-image: url('../images/fone-desk1x.jpg');
-}
-
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-.hero {
-    background-image: url('../images/fone-desk2x.jpg');
+@media screen and (min-width: 1440px) {
+   .hero {
+    padding-top: 120px;
   }
-}  
 
-.wrapper-all {
-   max-width: 1001px;
-   height: 350px;
+  .hero-text {
+    font-size: 56px;
+    max-width: 900px;
+  }
 }
 
-.hero-text {
-   font-size: 80px;
-}
-}
-
-/*second-section*/
+/*second section*/
 
 .second-section {
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
+  padding-bottom: 80px;
 }
 
 .all {
-   border-radius: 24px;
-   max-width: 335px;
-   background-color: #fbfbfb;
+  margin-bottom: 40px;
 }
 
 .second-section-big-text {
-   font-weight: 500;
-   font-size: 28px;
-   line-height: 1;
-   letter-spacing: -0.02em;
-   color: #1b414b;
-   padding-bottom: 40px;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-.second-section-one-desk {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: #1b414b;
-  padding-bottom: 20px;
+.second-section-richt-desk {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+.second-section-one-desk,
 .second-section-two-desk {
-  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(251, 251, 251, 0.7);
+}
+
+@media screen and (min-width: 768px) {
+   .second-section .container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .all {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+/*choose*/
+
+.choose {
+  padding: 80px 0;
+}
+
+.choose-text {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.choose-yacht-one,
+.choose-yacht-two,
+.choose-yacht-tree {
+  background-color: #1b414b;
+  border-radius: 24px;
+  padding: 16px;
+}
+
+.choose-title {
+  font-size: 16px;
+  margin: 16px 0 4px;
+}
+
+.choose-title-right {
   font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: -0.02em;
-  color: #040306;
-  opacity: 0.4;
-  padding-bottom: 40px;
+  opacity: 0.6;
+}
+
+.choose-line {
+  height: 1px;
+  background-color: rgba(251, 251, 251, 0.2);
+  margin: 16px 0;
+}
+
+.choose-list-left,
+.choose-list-right {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.choose-list-left {
+  color: rgba(251, 251, 251, 0.6);
+}
+
+.choose-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 28px;
+  background-color: #1b414b;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+     .choose-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .choose-yacht-one,
+  .choose-yacht-two,
+  .choose-yacht-tree {
+    width: calc((100% - 32px) / 2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+    .choose-yacht-one,
+  .choose-yacht-two,
+  .choose-yacht-tree {
+    width: calc((100% - 64px) / 3);
+  }
+}
+
+/*no name*/
+
+.no-name {
+  padding-bottom: 80px;
+}
+
+.wrapper-no-name {
+  margin-bottom: 40px;
+}
+
+.no-name-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.no-name-item {
+  background-color: #1b414b;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.no-name-text {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.no-name-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(251, 251, 251, 0.2);
+  margin-bottom: 10px;
+}
+
+.no-name-description {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .no-name .container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+}
+
+/*rent form*/
+
+.yacht-rent {
+  padding-bottom: 80px;
+}
+
+.wrapper-rent {
+  margin-bottom: 40px;
+}
+
+.rent-text {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.modal-form-input,
+.modal-form-textarea {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid rgba(251, 251, 251, 0.3);
+  border-radius: 12px;
+  color: #fbfbfb;
+  margin-bottom: 18px;
+}
+
+.modal-form-textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-botton-contact {
+  width: 100%;
+  padding: 14px;
+  background-color: #1b414b;
+  border: none;
+  border-radius: 15px;
+  color: #fbfbfb;
+}
+
+@media screen and (min-width: 768px) {
+    .yacht-rent .container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .wrapper-rent {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+/*reviews*/
+
+.reviews {
+  padding-bottom: 80px;
+}
+
+.reviews-logo {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.reviews-small-logo {
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: rgba(251, 251, 251, 0.7);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.reviews-item-one,
+.reviews-item-two,
+.reviews-item-tree {
+  background-color: #1b414b;
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+}
+
+.reviews-name-people {
+  margin: 14px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .reviews-list {
+    flex-direction: row;
+  }
+}
+
+/*footer*/
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-nav-list {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-description-one,
+.footer-description-two {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 1440px) {
+     .footer-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
