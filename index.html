@@ -110,13 +110,15 @@
 <!--region hero-->
 <main>
 <section class="hero">
-  <div class="container hero-container">
+  <div class="container">
+    <div class="wrapper-all">
     <h1 class="hero-text">Explore the High Seas with Our Luxury Yacht Rentals</h1>
     <p class="hero-description">Experience the freedom and luxury of yachting on the open seas. 
       Choose from our top-of-the-line yachts and embark on an unforgettable 
       journey surrounded by breathtaking views and state-of-the-art amenities.
     </p>
     <a class="hero-link" href="#yacht-rent">Yacht rental</a>
+    </div>
   </div>
 </section>
 
@@ -126,6 +128,7 @@
 
 <section class="second-section">
   <div class="container">
+    <div class="all">
     <h2 class="second-section-big-text">YachtJet fleet is here to take you on the ultimate adventure</h2>
     <div class="second-section-richt-desk">
       <p class="second-section-one-desk">From spacious decks to state-of-the-art technology, our yachts 
@@ -137,10 +140,25 @@
          for an unforgettable adventure on the high seas.
       </p>
     </div>
+    </div>
+    <picture>
+      <source
+        media="(min-width: 1440px)"
+        srcset="/images/second-desk1x.jpg 1x, /images/second-desk2x.jpg 2x"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/second-desk1x.jpg 1x, /images/second-desk2x.jpg 2x"
+      />
+      <source
+        media="(max-width: 320px)"
+        srcset="/images/second-mobile1x.jpg 1x, /images/second-mobile2x.jpg 2x"
+      />
     <img
-      src="./images"
+      src="/images/second-mobile1x.jpg"
       alt="picture of black yacht"
       width="335" height="395"/>
+    </picture>
   </div>
 </section>
 

@@ -26,6 +26,25 @@ body {
     cursor: pointer;
 }
 
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px 20px;  
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px; 
+    padding: 32px 32px;  
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px; 
+    padding: 32px 100px;   
+  }
+}
 
 /*header*/
 
@@ -39,8 +58,6 @@ body {
 /*section hero*/
 
 .hero {
-   max-width: 375px;
-   height: 812px;
    background-image: url('../images/fome-mobile1x.jpg');
    background-size: cover;
    background-repeat: no-repeat;
@@ -52,11 +69,15 @@ body {
    flex-direction: column;
 }
 
-.hero-container {
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: url('../images/fone-mobile2x.jpg')
+    }
+}
+
+.wrapper-all {
    max-width: 335px;
    height: 250px;
-   margin-left: 20px;
-   margin-right: 20px;
 }
 
 .hero-text {
@@ -94,16 +115,19 @@ body {
 
 @media screen and (min-width: 768px) {
 .hero {
-   max-width: 768px;
-   height: 962px;
    background-image: url('../images/fone-tablet1x.jpg');
 }
 
-.hero-container {
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+.hero {
+    background-image: url('../images/fone-tablet2x.jpg');
+  }
+}
+
+.wrapper-all {
    max-width: 704px;
    height: 400px;
-   margin-left: 32px;
-   margin-right: 32px;
 }
 
 .hero-text {
@@ -128,24 +152,65 @@ body {
 
 @media screen and (min-width: 1158px) {
 .hero {
-   max-width: 1440px;
-   height: 800px;
    background-image: url('../images/fone-desk1x.jpg');
 }
 
-.hero-container {
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+.hero {
+    background-image: url('../images/fone-desk2x.jpg');
+  }
+}  
+
+.wrapper-all {
    max-width: 1001px;
    height: 350px;
-   margin-left: 220px;
-   margin-right: 220px;
 }
 
 .hero-text {
    font-size: 80px;
 }
-
-.hero-description {
-    
-}
 }
 
+/*second-section*/
+
+.second-section {
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+
+.all {
+   border-radius: 24px;
+   max-width: 335px;
+   background-color: #fbfbfb;
+}
+
+.second-section-big-text {
+   font-weight: 500;
+   font-size: 28px;
+   line-height: 1;
+   letter-spacing: -0.02em;
+   color: #1b414b;
+   padding-bottom: 40px;
+}
+
+.second-section-one-desk {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #1b414b;
+  padding-bottom: 20px;
+}
+
+.second-section-two-desk {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: -0.02em;
+  color: #040306;
+  opacity: 0.4;
+  padding-bottom: 40px;
+}
