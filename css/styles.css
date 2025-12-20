@@ -385,12 +385,26 @@ img {
 
 /*choose*/
 
+
+.choose-yacht-two,
+.choose-yacht-tree {
+  display: none;
+}
+
 .choose {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .choose-text {
+  font-weight: 500;
   font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fbfbfb;
   margin-bottom: 40px;
 }
 
@@ -400,13 +414,6 @@ img {
   gap: 40px;
 }
 
-.choose-yacht-one,
-.choose-yacht-two,
-.choose-yacht-tree {
-  background-color: #1b414b;
-  border-radius: 24px;
-  padding: 16px;
-}
 
 .choose-title {
   font-size: 16px;
