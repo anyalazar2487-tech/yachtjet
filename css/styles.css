@@ -385,19 +385,9 @@ img {
 
 /*choose*/
 
-
-.choose-yacht-two,
-.choose-yacht-tree {
-  display: none;
-}
-
 .choose {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  display: flex;
-  flex-direction: column;
+  padding: 80px 0;
   text-align: center;
-  align-items: center;
 }
 
 .choose-text {
@@ -405,7 +395,6 @@ img {
   font-size: 28px;
   line-height: 1;
   letter-spacing: -0.02em;
-  text-align: center;
   color: #fbfbfb;
   margin-bottom: 40px;
 }
@@ -413,22 +402,42 @@ img {
 .choose-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 32px;
 }
 
-.choose-yacht-one {
-  border-radius: 24px;
-  max-width: 334px;
-  height: 478px;
+
+.choose-yacht-one,
+.choose-yacht-two,
+.choose-yacht-tree {
   background-color: #ffffff;
-  padding: 16px 16px 32px 16px;
+  border-radius: 24px;
+  padding: 16px 16px 32px;
+  max-width: 335px;
+  width: 100%;
+  min-height: 478px;
+  margin-bottom: 40px;
 }
+
+.choose-yacht-two,
+.choose-yacht-tree {
+  display: none;
+}
+
 
 .choose-img {
+  width: 100%;
+  height: auto;
   border-radius: 24px;
-  width: 302px;
-  height: 240px;
+  display: block;
 }
 
+
+.wrapper-one {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0 16px;
+}
 
 .choose-title {
   font-weight: 500;
@@ -449,16 +458,18 @@ img {
   opacity: 0.4;
 }
 
+
 .choose-line {
- stroke: rgba(4, 3, 6, 0.1);
- width: 100%;
- height: 1px;
- margin-bottom: 16px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(4, 3, 6, 0.1);
+  margin-bottom: 16px;
 }
 
-.choose-list-left {
-  text-align: left;
-  align-items: start;
+
+.wrapper-two {
+  display: flex;
+  justify-content: space-between;
 }
 
 .choose-description-left {
@@ -472,11 +483,6 @@ img {
   margin-bottom: 6px;
 }
 
-.choose-list-right {
-  text-align: right;
-  align-items: end;
-}
-
 .choose-description-right {
   font-weight: 400;
   font-size: 14px;
@@ -486,87 +492,60 @@ img {
   margin-bottom: 6px;
 }
 
-.wrapper-one {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
-  margin-bottom: 16px;
-}
-
-.wrapper-two {
-  display: flex;
-  justify-content: space-between;
-}
 
 .choose-link {
- border: 1px solid rgba(251, 251, 251, 0.35);
- border-radius: 15px;
- padding: 14px 32px;
- background-color: transparent;
- font-weight: 500;
- font-size: 14px;
- line-height: 1.29;
- letter-spacing: -0.02em;
- color: #fbfbfb;
- margin-top: 40px;
+  border: 1px solid rgba(251, 251, 251, 0.35);
+  border-radius: 15px;
+  padding: 14px 32px;
+  width: 141px;
+  height: 46px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
 }
 
 @media screen and (min-width: 768px) {
-.choose {
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
+  .choose {
+    padding: 150px 0;
+  }
 
-.choose-text {
-  font-size: 48px;
-  margin-bottom: 75px;
-}
+  .choose-text {
+    font-size: 48px;
+    margin-bottom: 75px;
+  }
 
-.choose-yacht-one {
-  width: 336px;
-  height: 508px;
-}
+  .choose-list {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-.choose-yacht-two {
-  display: block;
-  border-radius: 24px;
-  width: 336px;
-  height: 508px;
-  background-color: #ffffff;
-  padding: 16px 16px 32px 16px;
-} 
+  .choose-yacht-two {
+    display: block;
+  }
 
-.choose-img {
-  width: 304px;
-  height: 268px;
-}
-
-.choose-title {
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-.choose-title-right {
-  font-size: 13px;
-  line-height: 1.18;
-}
-
-.choose-link {
-  padding: 16px 40px;
-  font-size: 18px;
-  line-height: 1.1;
-  margin-top: 50px;
-}
- 
+  .choose-link {
+    margin-top: 50px;
+    padding: 16px 40px;
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .choose-yacht-one,
+  .choose-yacht-tree {
+    display: block;
+  }
+
+  .choose-yacht-one,
   .choose-yacht-two,
   .choose-yacht-tree {
-    width: calc((100% - 64px) / 3);
+    max-width: 392px;
   }
+
 }
+
 
 /*no name*/
 
@@ -575,43 +554,99 @@ img {
 }
 
 .wrapper-no-name {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .no-name-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
+  border-radius: 24px;
+  max-width: 335px;
+  height: 642px;
+  background-color: #1b414b;
+  padding: 80px 20px 80px 20px;
 }
 
-.no-name-item {
-  background-color: #1b414b;
-  border-radius: 20px;
-  padding: 20px;
-}
 
 .no-name-text {
+  font-weight: 500;
   font-size: 28px;
-  margin-bottom: 10px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #fbfbfb;
+  margin-bottom: 18px;
 }
 
 .no-name-line {
   width: 100%;
-  height: 1px;
+  height: 2px;
+  border-radius: 18px;
   background-color: rgba(251, 251, 251, 0.2);
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 .no-name-description {
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
+  opacity: 0.8;
+}
+
+.no-name-img {
+  border-radius: 24px;
+  width: 335px;
+  height: 424px;
 }
 
 @media screen and (min-width: 768px) {
-    .no-name .container {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-  }
+  .no-name {
+  padding-bottom: 150px;
+}
+
+.wrapper-no-name {
+  margin-bottom: 32px;
+}
+
+.no-name-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 704px;
+  height: 424px;
+  padding: 90px 32px 90px 32px;
+}
+
+.no-name-text {
+  font-size: 32px;
+}
+
+.no-name-description {
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+.no-name-img {
+  width: 704px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.no-name-list {
+  max-width: 768px;
+  padding: 90px 50px 90px 50px;
+}
+
+.no-name-img {
+  width: 540px;
+}
+
+.wrapper-desctop {
+  display: flex;
+  gap: 32px;
+}
 }
 
 /*rent form*/
@@ -621,50 +656,139 @@ img {
 }
 
 .wrapper-rent {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .rent-text {
+  font-weight: 500;
   font-size: 28px;
-  margin-bottom: 30px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
+  margin-bottom: 40px;
 }
 
-.modal-form-input,
-.modal-form-textarea {
-  width: 100%;
-  padding: 14px;
-  background: transparent;
-  border: 1px solid rgba(251, 251, 251, 0.3);
+.modal-form-input {
+  border: 1px solid rgba(251, 251, 251, 0.2);
   border-radius: 12px;
-  color: #fbfbfb;
+  padding: 14px;
+  width: 100%;
+  background-color: transparent;
   margin-bottom: 18px;
 }
 
 .modal-form-textarea {
-  height: 100px;
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  min-height: 108px;
   resize: none;
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+.modal-form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(251, 251, 251, 0.4);
+}
+
+.modal-form-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(251, 251, 251, 0.4);
 }
 
 .form-botton-contact {
-  width: 100%;
-  padding: 14px;
-  background-color: #1b414b;
-  border: none;
   border-radius: 15px;
+  padding: 14px 44px;
+  max-width: 122px;
+  height: 46px;
+  background-color: #1b414b;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
   color: #fbfbfb;
+  border: none;
+}
+
+.rent-img {
+  border-radius: 24px;
+  width: 335px;
+  height: 412px;
 }
 
 @media screen and (min-width: 768px) {
-    .yacht-rent .container {
+ .yacht-rent {
+  padding-bottom: 150px;
+}
+
+.wrapper-rent {
+  margin-bottom: 100px;
+  margin-left: 148px;
+  margin-right: 148px;
+}
+
+.rent-text {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.modal-form-input {
+  padding: 18px;
+}
+
+.modal-form-textarea {
+  padding: 18px;
+  min-height: 116px;
+  margin-bottom: 50px;
+}
+
+.modal-form-input::placeholder {
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.modal-form-textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.form-botton-contact {
+  padding: 18px 75px;
+  max-width: 194px;
+  height: 56px;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.rent-img {
+  width: 704px;
+  height: 534px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.wrapper-rent-desctop {
     display: flex;
-    gap: 32px;
-    align-items: center;
+    flex-direction: row-reverse;
+    gap: 50px;
   }
 
-  .wrapper-rent {
-    flex: 1;
-    margin-bottom: 0;
-  }
+.wrapper-rent {
+  max-width: 472px;
+  
+}
+
+.rent-img {
+    width: 768px;
+    height: 536px; 
+}
+
 }
 
 /*reviews*/
