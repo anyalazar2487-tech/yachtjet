@@ -1,4 +1,8 @@
 /* ===== RESET / BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   font-family: "Inter", sans-serif;
@@ -73,7 +77,11 @@ img {
 /*header*/
 
 .header {
-  padding: 20px 0;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .wrapper-header {
@@ -85,6 +93,7 @@ img {
   width: 335px;
   height: 42px;
   background-color:  #fbfbfb;
+  margin: 0 auto;
 }
 
 .header-logo {
@@ -117,7 +126,7 @@ img {
   }
 
 .header {
-  padding: 32px 0;
+  top: 32px;
 }
 
 .wrapper-header {
@@ -164,13 +173,21 @@ img {
 .header-social-icon {
   fill: #1b414b;
 }
+
+.header-social-icon:hover,
+.header-social-icon:focus {
+  fill: #062730;
+}
+
+.header-nav-item:hover,
+.header-nav-item:focus {
+  background-color:#1B414B ;
+  color: #FBFBFB;
+}
 }
 
 
 @media screen and (min-width: 1440px) {
-.header {
-  padding: 32px 100px 0 100px;
-}
 
 .wrapper-header {
   width: 1240px;
@@ -293,18 +310,17 @@ img {
   fill: #fbfbfb;
 }
 
+
 /*hero*/
 
 .hero {
+  position: relative;
   padding: 198px 0 243px;
   background-image: url('../images/fome-mobile1x.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 
@@ -316,6 +332,7 @@ img {
 
 .wrapper-all {
   max-width: 335px;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -352,6 +369,12 @@ img {
   color: #fbfbfb;
 }
 
+.hero-link:hover,
+.hero-link:focus {
+    background-color:#FBFBFB ;
+    color: #1B414B;
+  }
+
 @media screen and (min-width: 768px) {
    .hero {
     background-image: url('../images/fone-tablet1x.jpg');
@@ -360,6 +383,7 @@ img {
 
    .wrapper-all {
     max-width: 704px;
+    padding-top: 200px;
   }
 
   .hero-text {
@@ -395,6 +419,7 @@ img {
 
    .wrapper-all {
     max-width: 1001px;
+    padding-top: 155px;
   }
 
   .hero-text {
@@ -662,6 +687,12 @@ img {
   color: #fbfbfb;
 }
 
+.choose-link:hover,
+.choose-link:focus {
+    background-color: #FBFBFB;
+    color: #1B414B;
+  }
+
 @media screen and (min-width: 768px) {
   .choose {
     padding: 150px 0;
@@ -877,6 +908,12 @@ img {
   align-self: flex-start;
 }
 
+.form-botton-contact:hover,
+.form-botton-contact:focus {
+  background-color: #FBFBFB;
+  color: #1B414B;
+}
+
 .rent-img {
   display: block;
   width: 100%;
@@ -884,6 +921,11 @@ img {
   height: auto;
   margin: 0 auto;
   border-radius: 24px;
+}
+
+.modal-form-input,
+.modal-form-textarea {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -1129,6 +1171,12 @@ img {
   padding: 15px 12px 15px 12px;
 }
 
+.footer-nav-item:hover,
+.footer-nav-item:focus {
+  background-color: #FBFBFB;
+  color: #1B414B;
+}
+
 .footer-social-list {
   display: flex;
   justify-content: center;
@@ -1144,6 +1192,11 @@ img {
 
 .footer-social-icon {
   fill: #fbfbfb;
+}
+
+.footer-social-icon:hover,
+.footer-social-icon:focus {
+  fill: rgba(251, 251, 251, 0.8);
 }
 
 .footer-text {

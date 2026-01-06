@@ -13,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
 
 <!--region hero header-->
 <main>
-<section class="hero">
+<section class="hero" id="about">
 
 <header class="header">
     <div class="container">
@@ -27,9 +28,9 @@
         <nav class="header-nav">
             <a class="header-logo" href="./index.html">yachtjet</a>
             <ul class="header-nav-list">
-            <li class="header-nav-item"><a class="header-nav-link current" href="./index.html">About</a></li>
-            <li class="header-nav-item"><a class="header-nav-link" href="">Yachts</a></li>
-            <li class="header-nav-item"><a class="header-nav-link" href="">Reviews</a></li>
+            <li class="header-nav-item"><a class="header-nav-link current" href="#about">About</a></li>
+            <li class="header-nav-item"><a class="header-nav-link" href="#yachts">Yachts</a></li>
+            <li class="header-nav-item"><a class="header-nav-link" href="#reviews">Reviews</a></li>
             </ul>
         </nav>
         <ul class="header-social-list">
@@ -80,9 +81,9 @@
 
           <nav class="navigation-mobile-menu">
             <ul class="nav-list-mobile-menu">
-                <li class="nav-item-mobile-menu"><a class="navi-link-mobile-menu current" href="./index.html">About</a></li>
-                <li class="nav-item-mobile-menu"><a class="navi-link-mobile-menu current" href="">Yachts</a></li>
-                <li class="nav-item-mobile-menu"><a class="navi-link-mobile-menu current" href="">Reviews</a></li>
+                <li class="nav-item-mobile-menu"><a class="navi-link-mobile-menu current" href="#about">About</a></li>
+                <li class="nav-item-mobile-menu"><a class="navi-link-mobile-menu current" href="#yachts">Yachts</a></li>
+                <li class="nav-item-mobile-menu"><a class="navi-link-mobile-menu current" href="#reviews">Reviews</a></li>
             </ul>
           
             <ul class="social-list-mobile-menu">
@@ -173,7 +174,7 @@
 
 <!--region choose-->
 
-<section class="choose">
+<section class="choose" id="yachts">
   <div class="container">
 
     <h2 class="choose-text">
@@ -340,7 +341,7 @@
 
 <!--region rent modal-->
 
-<section class="yacht-rent">
+<section class="yacht-rent" id="yacht-rent">
   <div class="container">
     <div class="wrapper-rent-desctop">
      <div class="wrapper-rent">
@@ -403,7 +404,7 @@
 
 <!--region reviews-->
 
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="container">
     <h2 class="reviews-logo">YachtJet take pride in providing the best possible service and experience to our customers</h2>
     <p class="reviews-small-logo">Our customers have enjoyed unforgettable moments on our yachts. Don't just take our word for 
@@ -464,9 +465,9 @@
     <nav class="footer-nav">
       <a class="footer-logo" href="./index.html">yachtjet</a>
       <ul class="footer-nav-list">
-        <li class="footer-nav-item"><a class="footer-nav-link current" href="./index.html">About</a></li>
-        <li class="footer-nav-item"><a class="footer-nav-link" href="">Yachts</a></li>
-        <li class="footer-nav-item"><a class="footer-nav-link" href="">Reviews</a></li>
+        <li class="footer-nav-item"><a class="footer-nav-link current" href="#about">About</a></li>
+        <li class="footer-nav-item"><a class="footer-nav-link" href="#yachts">Yachts</a></li>
+        <li class="footer-nav-item"><a class="footer-nav-link" href="#reviews">Reviews</a></li>
       </ul>
     </nav>
       <ul class="footer-social-list">
@@ -504,6 +505,7 @@
   </div>
 </footer>
 
-    
+<script src="./js/main.js"></script>
+  
 </body>
 </html>
